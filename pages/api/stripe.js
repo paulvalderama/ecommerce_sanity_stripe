@@ -9,10 +9,19 @@ export default async function handler(req, res) {
         submit_type: 'pay',
         mode: 'payment',
         payment_method_types: ['card'],
-        billing_address_collection: 'auto',
+        billing_address_collection: 'required',
+        shipping_address_collection: {
+          allowed_countries: ['US', 'CA'],
+        },
         shipping_options: [
+          // test shipping 
           { shipping_rate: 'shr_1LaQO0AvPfmKE3Z2SPHWmyT4' },
           { shipping_rate: 'shr_1LaQPbAvPfmKE3Z2624mYekj'}
+          
+          //live shipping
+          // { shipping_rate: 'shr_1LaQO5AvPfmKE3Z2P6GUi3KP' },
+          // { shipping_rate: 'shr_1LcLRaAvPfmKE3Z2hoPHUXeh'}
+
         ],
         line_items: req.body.map((item) => {
           const img = item.image[0].asset._ref;
