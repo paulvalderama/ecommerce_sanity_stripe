@@ -15,12 +15,12 @@ export default async function handler(req, res) {
         },
         shipping_options: [
           // test shipping 
-          { shipping_rate: 'shr_1LaQO0AvPfmKE3Z2SPHWmyT4' },
-          { shipping_rate: 'shr_1LaQPbAvPfmKE3Z2624mYekj'}
+          // { shipping_rate: 'shr_1LaQO0AvPfmKE3Z2SPHWmyT4' },
+          // { shipping_rate: 'shr_1LaQPbAvPfmKE3Z2624mYekj'}
           
           //live shipping
-          // { shipping_rate: 'shr_1LaQO5AvPfmKE3Z2P6GUi3KP' },
-          // { shipping_rate: 'shr_1LcLRaAvPfmKE3Z2hoPHUXeh'}
+           { shipping_rate: 'shr_1LaQO5AvPfmKE3Z2P6GUi3KP' },
+           { shipping_rate: 'shr_1LcLRaAvPfmKE3Z2hoPHUXeh'}
 
         ],
         line_items: req.body.map((item) => {
